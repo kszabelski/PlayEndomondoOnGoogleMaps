@@ -1,11 +1,10 @@
 ﻿
     <div>
-        <h2>Upload points</h2>
         <div>
             @using (Html.BeginForm("Index", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
             {
                 <label for="file">Upload GPX from Endomondo:</label>
-                <input type="file" name="file" id="file" />
+                <input type="file" name="file" id="file" style="display: inline-block"/> 
                 <input type="submit" value="Upload" />
             }
             @if (!string.IsNullOrWhiteSpace(ViewBag.Coords))
@@ -18,7 +17,7 @@
         </div>
     </div>
     <div>
-        <div style="width:1280px;height:720px" id="map"></div>
+        <div style="width:1920px;height:1080px" id="map"></div>
     </div>
     @section scripts
     {
